@@ -36,7 +36,6 @@ public class FirstTest {
 	driver.get("https://www.guru99.com/");
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	
 	if(driver.getTitle().equals("Meet Guru99"))
 	{
 	test.log(LogStatus.PASS, "Navigated to the specified URL");
@@ -45,7 +44,6 @@ public class FirstTest {
 	{
 	test.log(LogStatus.FAIL, "Test Failed");
 	}
-	
 	File snapshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	FileHandler.copy(snapshot, new File("D:/Amaresh/screenshots/screenshot.jpg"));
 	driver.quit();
